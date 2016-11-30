@@ -24,6 +24,12 @@ type Monad interface {
 	Return(i interface{}) Monad
 }
 
+// MPlus defines the interface for the MonadPlus class
+type MPlus interface {
+	Monad
+	MZero() Monad
+}
+
 // FMap applies a function inside of a monadic value
 func FMap(f func(interface{}) interface{}, m Monad) Monad {
 	fmap := func(i interface{}) Monad {
@@ -35,4 +41,9 @@ func FMap(f func(interface{}) interface{}, m Monad) Monad {
 // Join takes a Monad (Monad (interface{})) and returns Monad (interface{})
 func Join(m Monad) Monad {
 	return m.AndThen(func(i interface{}) Monad { return i.(Monad) })
+}
+
+// Kleisli composition for monadic functions
+func Kleisli(a, b func(i interface{}) Monad) func(i interface{}) Monad {
+	return func(i interface{}) Monad { return b(i).AndThen(a) }
 }
