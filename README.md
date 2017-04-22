@@ -1,4 +1,4 @@
-# Gofpher [![GoDoc](https://godoc.org/github.com/asteris-llc/gofpher?status.svg)](https://godoc.org/github.com/asteris-llc/gofpher) [![Go Report Card](https://goreportcard.com/badge/github.com/asteris-llc/gofpher)](https://goreportcard.com/report/github.com/asteris-llc/gofpher)
+# Gofpher [![GoDoc](https://godoc.org/github.com/asteris-llc/gofpher?status.svg)](https://godoc.org/github.com/asteris-llc/gofpher) [![Go Report Card](https://goreportcard.com/badge/github.com/asteris-llc/gofpher)](https://goreportcard.com/report/github.com/asteris-llc/gofpher) [![Build Status](https://travis-ci.org/asteris-llc/gofpher.svg?branch=master)](https://travis-ci.org/asteris-llc/gofpher)
 
 Gofpher is a collection of FP-like utilities for go, useful for rapidly
 prototyping an application.
