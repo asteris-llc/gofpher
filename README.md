@@ -1,4 +1,4 @@
-# Gofpher
+# Gofpher [![Go Report Card](https://goreportcard.com/badge/github.com/asteris-llc/gofpher)](https://goreportcard.com/report/github.com/asteris-llc/gofpher)
 
 Gofpher is a collection of FP-like utilities for go, useful for rapidly
 prototyping an application.
