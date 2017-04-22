@@ -107,7 +107,7 @@ func Map(f func(interface{}) interface{}, l List) List {
 	return Consf(mapperFunc, Map(f, next()))
 }
 
-// MapM applies f to each element then evaluates each funciton in sequence
+// MapM applies f to each element then evaluates each function in sequence
 func MapM(f func(interface{}), l List) {
 	adapter := func(i interface{}) interface{} {
 		f(i)

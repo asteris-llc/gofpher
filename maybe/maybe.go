@@ -33,7 +33,7 @@ type Maybe struct {
 	internal interface{}
 }
 
-// AndThen provides the monadic implementaiton of AndThen
+// AndThen provides the monadic implementation of AndThen
 func (m Maybe) AndThen(f func(interface{}) monad.Monad) monad.Monad {
 	if asJust, ok := m.internal.(just); ok {
 		return f(asJust.Val)
@@ -41,7 +41,7 @@ func (m Maybe) AndThen(f func(interface{}) monad.Monad) monad.Monad {
 	return m
 }
 
-// LogAndThen provides the monadic implementaiton of LogAndThen
+// LogAndThen provides the monadic implementation of LogAndThen
 func (m Maybe) LogAndThen(f func(interface{}) monad.Monad, logger func(interface{})) monad.Monad {
 	logger(m)
 	if asJust, ok := m.internal.(just); ok {
